@@ -22,7 +22,7 @@ public class TrabalhoAlgoritmos
 
     public static void printMenu()
     {
-        int menuValor;
+        //int menuValor;
         
          System.out.printf("======== MENU DE OPÇÕES ======== \n"
                     + "–\n"
@@ -46,9 +46,9 @@ public class TrabalhoAlgoritmos
                     + "\n ==================================="
                     + "\n Escolha sua opção : ");
          
-         menuValor = ler.nextInt();
+         //menuValor = ler.nextInt();
          
-         options(menuValor);
+         options(ler.nextInt());
     }
     
     public static void options(int menuValorOptions)
