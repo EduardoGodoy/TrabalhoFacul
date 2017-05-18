@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class TrabalhoAlgoritmos 
 {
     //Scanner
-    public Scanner ler = new Scanner(System.in);
+    public static Scanner ler = new Scanner(System.in);
     
     //BOOLS
-    public boolean running;
+   // public boolean running;
     
     //INTS
-    public int menuValor;
+    //public int menuValor;
     public int vectorSize1, vectorSize2;
     
     //VETORES
@@ -20,8 +20,10 @@ public class TrabalhoAlgoritmos
     
     
 
-    public void printMenu()
+    public static void printMenu()
     {
+        int menuValor;
+        
          System.out.printf("======== MENU DE OPÇÕES ======== \n"
                     + "–\n"
                     + "1 - Preencher vetores \n"
@@ -46,12 +48,12 @@ public class TrabalhoAlgoritmos
          
          menuValor = ler.nextInt();
          
-         options();
+         options(menuValor);
     }
     
-    public void options()
+    public static void options(int menuValorOptions)
     {
-         switch(menuValor)
+         switch(menuValorOptions)
          {
              case 1:
                  fillVector();
@@ -65,7 +67,7 @@ public class TrabalhoAlgoritmos
              case 8:
              case 9:
                  System.out.println("Bye bye");
-                 running = false;
+                 System.exit(0);
              default:
                  System.out.printf("ERROR... Oh não!!!"
                          + "\nPor favor insira um valor valido!!!");   
@@ -74,7 +76,7 @@ public class TrabalhoAlgoritmos
     }
     
     //menuValor == 1
-    public void fillVector()
+    public static void fillVector()
     {
         int choice;
         
@@ -101,50 +103,52 @@ public class TrabalhoAlgoritmos
     }
     
     //menuValor == 2
-    public void printVector()
+    public static void printVector()
     {
         
     }
     
     //menuValor == 3
-    public void editVector()
+    public static void editVector()
     {
         
     }
     
     //menuValor == 4
-    public void browseVector()
+    public static void browseVector()
     {
         
     }
     
     //menuValor == 5
-    public void orderVector()
+    public static void orderVector()
     {
         
     }
     
     //menuValor == 6
-    public void doMath()
+    public static void doMath()
     {
         
     }
     
     //menuValor == 7
-    public void doStatistic()
+    public static void doStatistic()
     {
         
     }
     
     //menuValor == 8
-    public void elementsValid()
+    public static void elementsValid()
     {
         
     }
     
-    
     public static void main(String[] args) 
     {
+        
+      
+   
         //Declaração de variaveis
         int ValorMenu = 0;
         int Menu, vetorSize;
